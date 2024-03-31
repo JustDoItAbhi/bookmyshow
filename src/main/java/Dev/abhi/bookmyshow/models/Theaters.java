@@ -10,8 +10,9 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class City extends BaseModel{
+public class Theaters extends BaseModel {
 private String name;
+private String address;
 @OneToMany
-private List<Theaters> theatersList;
+private List<Auditoriums> audis;
 }
