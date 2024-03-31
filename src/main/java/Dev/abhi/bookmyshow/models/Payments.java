@@ -8,10 +8,10 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Entity
+
 @Getter
 @Setter
-
+@Entity
 public class Payments extends BaseModel{
     private LocalDateTime paymentTime;
     private double AMOUNT;
