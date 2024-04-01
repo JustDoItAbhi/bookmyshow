@@ -15,8 +15,11 @@ public abstract class BaseModel {
     private int id;
     @Column(name = "CREATED_AT")
     private LocalDateTime createdAt;
+    @Column(name = "UPDATED_AT")
     private LocalDateTime updatedAt;
+    @Column(name = "CREATED_BY")
     private String createdBY;
+    @Column(name = "UPDATED_BT")
     private String updatedBy;
 
 }

@@ -8,15 +8,19 @@ import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Seats extends BaseModel{
-    private int row;
-    private int col;
-    private String seatNumber;
+
+    private int row1;
+
+    private int coll;
+    private String seat_Number;
+
     @Enumerated(EnumType.STRING)
-    private SeatType seatType;
+
+    private SeatType seat_Type;
     @Enumerated(EnumType.STRING)
-    private SeatStatus seatStatus;
+    private SeatStatus seat_Status;
 }
