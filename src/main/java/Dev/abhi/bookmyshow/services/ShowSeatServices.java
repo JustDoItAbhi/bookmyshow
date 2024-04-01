@@ -1,7 +1,8 @@
 package Dev.abhi.bookmyshow.services;
 
-import Dev.abhi.bookmyshow.repostitories.ShowSeatRepositroy;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ShowSeatServices {
-    private ShowSeatRepositroy showSeatRepositroy;
+//    private ShowSeatRepositroy showSeatRepositroy;
 }
