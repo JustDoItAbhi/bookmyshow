@@ -10,17 +10,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class CityServices {
  @Autowired
     private CityRepository cityRepository;
+    public City getCityByName(String cityName){
+        City city=cityRepository.findCitiesByName(cityName);
+        return city;
+    }
+ public City getCityById(int cityId){
+        return cityRepository.findById(cityId).get();
+    }
     public City saveCity(String cityName){
         City city=new City();
         city.setName(cityName);
+        return cityRepository.save(city);
+    }
+    public City saveCity(City city){
         return cityRepository.save(city);
     }
     public boolean deleteCity(int cityid){
         cityRepository.deleteById(cityid);
         return true;
     }
-    public City getCityByName(String cityName){
-        City city=cityRepository.findCitiesByName(cityName);
-        return city;
-    }
+
 }
