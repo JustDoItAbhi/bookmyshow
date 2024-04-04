@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TheaterServices {
@@ -14,7 +15,16 @@ public class TheaterServices {
 private TheatersRepository theatersRepository;
 @Autowired
 private CityServices cityServices;
+
+public Theaters getTheaterByName(String TheaterName){
+    Theaters theaters=theatersRepository.findTheatersByName(TheaterName);
+    return theaters;
+}
+public Theaters getTheaterById(int theaterId){
+   return theatersRepository.findById(theaterId).get();
+}
 public Theaters saveTheater(String name,String address, int cityId){
+
     Theaters theaters=new Theaters();
     theaters.setName(name);
     theaters.setAddress(address);
